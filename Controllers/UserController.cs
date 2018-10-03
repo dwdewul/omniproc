@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace omniproc.Controllers
 {
     [Route("users")]
-    public class UserController: Controller
+    [ApiController]
+    public class UserController : ControllerBase
     {
         [HttpGet("all")]
-        public ActionResult GetUsers() {
+        public ActionResult GetUsers()
+        {
             return Ok("Response works");
         }
     }
